@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "5a030900-e860-4868-b54b-e8c02bf647ee",
+		"name": "Serverless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7829958"
+	},
+	"item": [
+		{
+			"name": "users-local",
+			"item": [
+				{
+					"name": "listUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/dev/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cesar C\",\r\n    \"age\": 33,\r\n    \"telefono\": \"3014025431\",\r\n    \"direccion\": \"Cr75 77\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dev/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cesar Castaño Alvarez\",\r\n    \"age\": 34,\r\n    \"telefono\": \"3014025431\",\r\n    \"direccion\": \"Cr75 # 61-85\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dev/users/aa2c6d1e-816c-472f-a5b4-0d5773751625",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"users",
+								"aa2c6d1e-816c-472f-a5b4-0d5773751625"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/dev/users/aa2c6d1e-816c-472f-a5b4-0d5773751625",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"users",
+								"aa2c6d1e-816c-472f-a5b4-0d5773751625"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
