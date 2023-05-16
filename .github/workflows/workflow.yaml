@@ -13,10 +13,13 @@ jobs:
 
     - name: NPM - Install dependencies
       if: steps.cached-npm-dependencies.outputs.cache-hit != 'true'
-      run: 'npm install'
+      run: |
+        cd usuarios
+        npm install
 
     - name: Run Tests
       run: |
+        cd usuarios      
         npm run test
 
   deploy-env:
@@ -35,10 +38,14 @@ jobs:
 
     - name: NPM - Install dependencies
       if: steps.cached-npm-dependencies.outputs.cache-hit != 'true'
-      run: 'npm install'
+      run: |
+        cd usuarios
+        npm install
 
     - name: Deploy using sls
-      run: 'npx sls deploy'
+      run: |
+        cd usuarios      
+        npx sls deploy
       env:
         AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
         AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
