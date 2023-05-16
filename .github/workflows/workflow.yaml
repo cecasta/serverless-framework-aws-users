@@ -2,7 +2,7 @@ name: Deploy DEV
 
 on:
   pull_request:
-    branches: [ serverless-users ]
+    branches: [ deployaws ]
 
 jobs:
   testing-changes:
